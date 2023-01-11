@@ -8,8 +8,8 @@
   },
   "test": {
     "username": "root",
-    "password": null,
-    "database": "database_test",
+    "password": "Ren@0099",
+    "database": "aluraflix",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

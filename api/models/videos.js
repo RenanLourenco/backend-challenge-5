@@ -10,13 +10,16 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Videos.belongsTo(models.Categorias,{
+        foreignKey:'categoriaId'
+      })
     }
   }
   Videos.init({
+    categoriaId: DataTypes.STRING,
     titulo: DataTypes.STRING,
     descricao: DataTypes.STRING,
-    url: DataTypes.STRING
+    url: {allowNull:false,type: DataTypes.STRING, validate:{ is: /^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube(-nocookie)?\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/} }
   }, {
     sequelize,
     modelName: 'Videos',
