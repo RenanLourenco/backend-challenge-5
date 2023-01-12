@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">43.24% </span>
+                <span class="strong">68% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>32/74</span>
+                <span class='fraction'>51/75</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.85% </span>
+                <span class="strong">41.66% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/7</span>
+                <span class='fraction'>5/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">83.33% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/6</span>
+                <span class='fraction'>5/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">43.24% </span>
+                <span class="strong">68% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>32/74</span>
+                <span class='fraction'>51/75</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -136,7 +136,8 @@
 <a name='L71'></a><a href='#L71'>71</a>
 <a name='L72'></a><a href='#L72'>72</a>
 <a name='L73'></a><a href='#L73'>73</a>
-<a name='L74'></a><a href='#L74'>74</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -171,31 +172,32 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -243,32 +245,33 @@ class VideoController{
 <span class="cstat-no" title="statement not covered" >            return res.status(500).send('Internal server error')</span>
 <span class="cstat-no" title="statement not covered" >        }</span>
     }
-<span class="fstat-no" title="function not covered" >    static async postVideo(req,res){</span>
-<span class="cstat-no" title="statement not covered" >        const video = {</span>
-<span class="cstat-no" title="statement not covered" >            categoriaId:req.body.categoriaId,</span>
-<span class="cstat-no" title="statement not covered" >            titulo:req.body.titulo,</span>
-<span class="cstat-no" title="statement not covered" >            descricao:req.body.descricao,</span>
-<span class="cstat-no" title="statement not covered" >            url:req.body.descricao</span>
-<span class="cstat-no" title="statement not covered" >        }</span>
-<span class="cstat-no" title="statement not covered" >        if(video.categoriaId === null || video.categoriaId === '' || typeof video.categoriaId === "undefined")</span>
+    static async postVideo(req,res){
+        const video = {
+            categoriaId:req.body.categoriaId,
+            titulo:req.body.titulo,
+            descricao:req.body.descricao,
+            url:req.body.url
+        }
+        
+        if(video.categoriaId === null || video.categoriaId === '' || typeof video.categoriaId === "undefined" || !video.categoriaId)<span class="branch-0 cbranch-no" title="branch not covered" >{</span>
 <span class="cstat-no" title="statement not covered" >            video.categoriaId = 1</span>
-<span class="cstat-no" title="statement not covered" >        </span>
-<span class="cstat-no" title="statement not covered" >        try {</span>
-<span class="cstat-no" title="statement not covered" >            const newVideo = await videosServices.registerCreate(video)</span>
-<span class="cstat-no" title="statement not covered" >            return res.status(200).send(newVideo)</span>
-<span class="cstat-no" title="statement not covered" >        } catch (error) {</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+        try {
+            const newVideo = await videosServices.registerCreate(video)
+            return res.status(201).send(newVideo)
+        } <span class="branch-0 cbranch-no" title="branch not covered" >catch (error) {</span>
 <span class="cstat-no" title="statement not covered" >            return res.status(500).send('Internal Server Error')</span>
 <span class="cstat-no" title="statement not covered" >        }</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
-<span class="fstat-no" title="function not covered" >    static async deleteVideo(req,res){</span>
-<span class="cstat-no" title="statement not covered" >        const { id } = req.params</span>
-<span class="cstat-no" title="statement not covered" >        try {</span>
-<span class="cstat-no" title="statement not covered" >            await videosServices.registerDelete(id)</span>
-<span class="cstat-no" title="statement not covered" >            return res.status(200).send({message:`o Video com id ${id} foi deletado com sucesso`})</span>
-<span class="cstat-no" title="statement not covered" >        } catch (error) {</span>
+    }
+    static async deleteVideo(req,res){
+        const { id } = req.params
+        try {
+            await videosServices.registerDelete(id)
+            return res.status(200).send({message:`o Video com id ${id} foi deletado com sucesso`})
+        } <span class="branch-0 cbranch-no" title="branch not covered" >catch (error) {</span>
 <span class="cstat-no" title="statement not covered" >            return res.status(500).send('Internal Server Error')</span>
 <span class="cstat-no" title="statement not covered" >        }</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
+    }
 <span class="fstat-no" title="function not covered" >    static async updateVideo(req,res){</span>
 <span class="cstat-no" title="statement not covered" >        const { id } = req.params</span>
 <span class="cstat-no" title="statement not covered" >        const newData = req.body</span>
@@ -289,7 +292,7 @@ module.exports = VideoController</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-01-11T19:42:34.698Z
+                at 2023-01-12T20:21:59.640Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

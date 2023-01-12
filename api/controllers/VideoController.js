@@ -37,14 +37,15 @@ class VideoController{
             categoriaId:req.body.categoriaId,
             titulo:req.body.titulo,
             descricao:req.body.descricao,
-            url:req.body.descricao
+            url:req.body.url
         }
-        if(video.categoriaId === null || video.categoriaId === '' || typeof video.categoriaId === "undefined")
-            video.categoriaId = 1
         
+        if(video.categoriaId === null || video.categoriaId === '' || typeof video.categoriaId === "undefined" || !video.categoriaId){
+            video.categoriaId = 1
+        }
         try {
             const newVideo = await videosServices.registerCreate(video)
-            return res.status(200).send(newVideo)
+            return res.status(201).send(newVideo)
         } catch (error) {
             return res.status(500).send('Internal Server Error')
         }
