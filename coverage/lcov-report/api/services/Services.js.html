@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">71.42% </span>
+                <span class="strong">80.95% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>30/42</span>
+                <span class='fraction'>34/42</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/12</span>
+                <span class='fraction'>8/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">71.42% </span>
+                <span class="strong">80.95% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>30/42</span>
+                <span class='fraction'>34/42</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -108,26 +108,26 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -135,8 +135,8 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -160,9 +160,9 @@ class Services {
     async getAllRegistersWithQuery(where ={}){
         return database[this.modelName].findAll({where : {...where}})
     }
-<span class="fstat-no" title="function not covered" >    async getOneRegisterWithQuery(where = {}){</span>
-<span class="cstat-no" title="statement not covered" >        return database[this.modelName].findAll({where: {...where}})</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
+    async getOneRegisterWithQuery(where = {}){
+        return database[this.modelName].findAll({where: {...where}})
+    }
 <span class="fstat-no" title="function not covered" >    async registerFindAndCount(where = {},options){</span>
 <span class="cstat-no" title="statement not covered" >        return database[this.modelName].findAndCountAll({where:{...where}, ...options})</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
@@ -175,9 +175,9 @@ class Services {
 <span class="fstat-no" title="function not covered" >    async registerRestoreWhere(where = {}){</span>
 <span class="cstat-no" title="statement not covered" >        return database[this.modelName].restore({where:{...where}})</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
-<span class="fstat-no" title="function not covered" >    async registerUpdate(data,id,transacao = {}){</span>
-<span class="cstat-no" title="statement not covered" >        return database[this.modelName].update(data,{where:{id:id}}, transacao)</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
+    async registerUpdate(data,id,transacao = {}){
+        return database[this.modelName].update(data,{where:{id:id}}, transacao)
+    }
 <span class="fstat-no" title="function not covered" >    async registerUpdates(data,where,transacao = {}){</span>
 <span class="cstat-no" title="statement not covered" >        return database[this.modelName].update(data,{where: {...where} }, transacao)</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
@@ -193,7 +193,7 @@ module.exports = Services</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-01-12T20:21:59.640Z
+                at 2023-01-13T20:36:55.380Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

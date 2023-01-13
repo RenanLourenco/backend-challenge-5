@@ -1,7 +1,7 @@
-const database = require('../models')
+const database = require('../../models')
 const SequelizeMock = require('sequelize-mock')
 const dbMock = new SequelizeMock();
-const Services = require('../services/Services')
+const Services = require('../../services/Services')
 const videosServices = new Services('Videos')
 
 let Video = dbMock.define('Video',{

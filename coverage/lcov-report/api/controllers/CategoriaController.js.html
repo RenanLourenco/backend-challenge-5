@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">22.78% </span>
+                <span class="strong">44.3% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>18/79</span>
+                <span class='fraction'>35/79</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>3/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>3/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">22.78% </span>
+                <span class="strong">44.3% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>18/79</span>
+                <span class='fraction'>35/79</span>
             </div>
         
             
@@ -150,31 +150,31 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -227,32 +227,32 @@ const categoriasServices = new CategoriasServices()
 &nbsp;
 &nbsp;
 class CategoriaController{
-<span class="fstat-no" title="function not covered" >    static async getAllCategorias(req,res){</span>
-<span class="cstat-no" title="statement not covered" >        try {</span>
-<span class="cstat-no" title="statement not covered" >            const categorias = await categoriasServices.getAllRegisters()</span>
-<span class="cstat-no" title="statement not covered" >            return res.status(200).json(categorias)</span>
-<span class="cstat-no" title="statement not covered" >        } catch (error) {</span>
+    static async getAllCategorias(req,res){
+        try {
+            const categorias = await categoriasServices.getAllRegisters()
+            return res.status(200).json(categorias)
+        } <span class="branch-0 cbranch-no" title="branch not covered" >catch (error) {</span>
 <span class="cstat-no" title="statement not covered" >            return res.status(500).send('Internal Server Error')</span>
 <span class="cstat-no" title="statement not covered" >        }</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
-<span class="fstat-no" title="function not covered" >    static async getCategoria(req,res){</span>
-<span class="cstat-no" title="statement not covered" >       const { id } = req.params</span>
-<span class="cstat-no" title="statement not covered" >        try {</span>
-<span class="cstat-no" title="statement not covered" >            const categoria = await categoriasServices.getOneRegister(id)</span>
-<span class="cstat-no" title="statement not covered" >            return res.status(200).json(categoria)</span>
-<span class="cstat-no" title="statement not covered" >        } catch (error) {</span>
+    }
+    static async getCategoria(req,res){
+       const { id } = req.params
+        try {
+            const categoria = await categoriasServices.getOneRegister(id)
+            return res.status(200).json(categoria)
+        } <span class="branch-0 cbranch-no" title="branch not covered" >catch (error) {</span>
 <span class="cstat-no" title="statement not covered" >            return res.status(500).send('Internal Server Error')</span>
 <span class="cstat-no" title="statement not covered" >        }</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
-<span class="fstat-no" title="function not covered" >    static async getVideosByCategoria(req,res){</span>
-<span class="cstat-no" title="statement not covered" >        const { id } = req.params</span>
-<span class="cstat-no" title="statement not covered" >        try {</span>
-<span class="cstat-no" title="statement not covered" >            const video = await videosServices.getOneRegisterWithQuery({categoriaId:Number(id)})</span>
-<span class="cstat-no" title="statement not covered" >            return res.status(200).json(video)</span>
-<span class="cstat-no" title="statement not covered" >        } catch (error) {</span>
+    }
+    static async getVideosByCategoria(req,res){
+        const { id } = req.params
+        try {
+            const video = await videosServices.getOneRegisterWithQuery({categoriaId:Number(id)})
+            return res.status(200).json(video)
+        } <span class="branch-0 cbranch-no" title="branch not covered" >catch (error) {</span>
 <span class="cstat-no" title="statement not covered" >            return res.status(500).send('Internal Server Error')</span>
 <span class="cstat-no" title="statement not covered" >        }</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
+    }
 <span class="fstat-no" title="function not covered" >    static async updateCategoria(req,res){</span>
 <span class="cstat-no" title="statement not covered" >        const { id } = req.params</span>
 <span class="cstat-no" title="statement not covered" >        const newInfo = req.body</span>
@@ -304,7 +304,7 @@ module.exports = CategoriaController</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-01-12T20:21:59.640Z
+                at 2023-01-13T20:36:55.380Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
