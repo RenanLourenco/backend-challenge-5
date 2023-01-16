@@ -96,6 +96,7 @@ describe('Videos routes', () => {
             })
             
         })
+
     })
     
     describe('put in video', () => {
@@ -115,6 +116,10 @@ describe('Videos routes', () => {
                               .send({titulo: "updated title"})
             expect(res.statusCode).toBe(200)
             expect(res.body.titulo).not.toBe(video.titulo)
+        })
+
+        afterEach(async () => {
+            await videosServices.registerDelete(video.id)
         })
     })
 

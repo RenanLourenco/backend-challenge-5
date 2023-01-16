@@ -1,6 +1,5 @@
 const { Router } = require('express')
 const CategoriaController = require('../controllers/CategoriaController')
-// const Middlewares = require('../middlewares/urlValidation')
 const router = Router()
 
 router
