@@ -1,3 +1,3 @@
-node_modules/
-coverage/
+coverage
 api/test
+node_modules
