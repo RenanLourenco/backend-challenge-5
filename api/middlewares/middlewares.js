@@ -17,6 +17,9 @@ class Middlewares{
         }
         
     }
+    static login(req,res,next){
+        
+    }
     
 }
 
