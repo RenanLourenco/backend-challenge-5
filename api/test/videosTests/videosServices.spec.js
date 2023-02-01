@@ -25,8 +25,8 @@ describe('Create Video', () => {
         const video = await videosServices.registerCreate({
             titulo: "mock-test",
             descricao:"mock-test",
-            url:"https://www.youtube.com/watch?v=18Dgf7lb9QA&ab_channel=Rocketseat",
-            categoriaId: 5
+            url:"https://www.youtube.com/watch?v=SoqfzghnVsg",
+            categoriaId: 2
         })
        
        expect(video.url).toMatch(regex)

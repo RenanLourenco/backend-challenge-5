@@ -6,6 +6,9 @@ class UsuariosServices extends Services {
     constructor(){
         super('Usuarios')
     }
+    async getUserByEmail(email){
+        return database[this.modelName].findOne({where:{email:email}})
+    }
 }
 
-modules.exports = UsuariosServices
+module.exports = UsuariosServices

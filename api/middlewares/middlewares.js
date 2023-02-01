@@ -1,4 +1,4 @@
-
+const jwt = require('jsonwebtoken')
 
 class Middlewares{
     static urlValidation(req,res,next){
@@ -17,8 +17,15 @@ class Middlewares{
         }
         
     }
-    static login(req,res,next){
-        
+    static authorization(req,res,next){
+        try {
+            const token = req.headers.authorization.split(' ')[1]
+            const decode = jwt.verify(token, process.env.JWT_SECRET);
+            req.usuario = decode
+            next()
+        } catch (error) {
+            return res.status(400).send({message:`Token inválido`})
+        }
     }
     
 }

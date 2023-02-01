@@ -21,7 +21,7 @@ describe('Videos routes', () => {
             }]))
         })
         it('search for the video with the title on the query params', async () => {
-            const title = 'mock-test'
+            const title = 'Video com categoria'
             const res = await request(app).get(`/videos/search?titulo=${title}`)
             expect(res.statusCode).toBe(200)
             expect(res.body).toEqual(expect.arrayContaining([{
@@ -35,7 +35,7 @@ describe('Videos routes', () => {
             }]))
         })
         it('search for a video which id is the same as we query', async () => {
-            const id = 131
+            const id = 7
             const res = await request(app).get(`/videos/${id}`)
             expect(res.statusCode).toBe(200)
             expect(res.body).toStrictEqual({
@@ -52,15 +52,16 @@ describe('Videos routes', () => {
     })
     
     describe('delete video ', () => {
-        let video;
+        
     
         beforeEach(async () => {
             video = await videosServices.registerCreate({
                 titulo: "mock-test",
                 descricao:"mock-test",
-                url:"https://www.youtube.com/watch?v=18Dgf7lb9QA&ab_channel=Rocketseat",
-                categoriaId: 5
+                url:"https://www.youtube.com/watch?v=CkH8CSVeTRs&t=1075s",
+                categoriaId: 1
             })
+            
         })
         it('delete video', async () => {
             const res = await request(app)
@@ -77,8 +78,7 @@ describe('Videos routes', () => {
             video = {
                 titulo: "mock-test",
                 descricao:"mock-test",
-                url:"https://youtu.be/UiQw2HM4DtM",
-                categoriaId: 5
+                url:"https://www.youtube.com/watch?v=CkH8CSVeTRs&t=1075s"
             }
         })
         it('post a new video', async () => {
@@ -90,6 +90,7 @@ describe('Videos routes', () => {
             const createdVideo = await videosServices.getOneRegister(res.body.id)
             expect(res.body).toStrictEqual({
                 id:createdVideo.id,
+                categoriaId:1,
                 createdAt:res.body.createdAt,
                 updatedAt:res.body.updatedAt,
                 ...video
@@ -100,26 +101,23 @@ describe('Videos routes', () => {
     })
     
     describe('put in video', () => {
-        let video;
     
         beforeEach(async () => {
             video = await database.Videos.create({
-                titulo: "mock-test",
+                titulo: "mockTOUPDATE",
+                categoriaId:2,
                 descricao:"mock-test",
-                url:"https://youtube.com/watch?v=q28lfkBd9F4&si=EnSIkaIECMiOmarE",
-                categoriaId: 5
+                url:"https://www.youtube.com/watch?v=qy2O_tkUjnM&t=1904s",
             })
+            
         })
         it('update in video', async () => {
+            console.log(video)
             const res = await request(app)
                               .put(`/videos/${video.id}`)
                               .send({titulo: "updated title"})
             expect(res.statusCode).toBe(200)
             expect(res.body.titulo).not.toBe(video.titulo)
-        })
-
-        afterEach(async () => {
-            await videosServices.registerDelete(video.id)
         })
     })
 
