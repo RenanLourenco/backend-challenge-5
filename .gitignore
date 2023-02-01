@@ -1,6 +1,4 @@
 coverage/
 api/test/
 node_modules
-.env
 .DS_Store
-api/config/
